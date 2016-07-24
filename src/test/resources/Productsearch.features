@@ -1,0 +1,25 @@
+Feature: Product Search
+
+  Scenario Outline: search for the Product
+
+    Given user should be on Homepage
+    When user search for the "<Product>"
+    Then user should be able to see the respective"<Product>" results
+
+    Examples:
+      |Product|
+      | Coats |
+
+
+  Scenario Outline: Add a product to the Bag
+    Given user should be on HomePage
+    When user search for the "<Product>"
+    Then user selects the "<Product>" from the results
+    And user selects the appropriate size
+    And user adds the "<Product>" in the Bag
+    Then user should be able to see the respective "<Product>"in the Bag
+
+
+    Examples:
+      |Product|
+      | Coats |
